@@ -3,33 +3,23 @@
     height: 100vh;
   }
 
-  /* .frame {
-    margin: auto;
-    width: 90vw;
-    height: 90vh;
-    background-color: #0f0f0f;
-    border: 2px solid #808080;
-    position: absolute;
-    top: 10vh;
-    left: 50%;
-    transform: translate(-50%, 0);
-  } */
-  
+
+  /* Marge de 30px de chaque coté */
   .frame {
-    width: 90vw;
-    height: 90vh;
-    background-color: #0f0f0f;
-    border: 2px solid #808080;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    border: 1px solid #808080;
   }
-  
-  @media only screen and (max-width: 900px) {
+
+  @media screen and (max-width: 800px) and (min-width: 500px) {
     .frame {
-      width: calc(100vw - 20px);
-      height: calc(100vh - 20px);
-      margin: 10px;
+      width: calc(100% - (100% * 0.05));
+      height: calc(100% - (100% * 0.05));
+      margin: calc((100vw - 500px) * 0.05 / 2);
     }
   }
